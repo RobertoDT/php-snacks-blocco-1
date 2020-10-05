@@ -6,14 +6,16 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 <?php
 //controllo sui parametri che siano tutti non vuoti
-  if($_GET["name"] != "" && $_GET["mail"] != "" && $_GET["age"] != ""){
+  if(!empty($_GET["name"]) && !empty($_GET["mail"]) && !empty($_GET["age"])){
 
-    if(strlen($_GET["name"]) > 3 && strpos($_GET["mail"], ".") !== false && strpos($_GET["mail"], "@") !== false && is_numeric($_GET["age"])){
+    $name = $_GET["name"];
+    $mail = $_GET["mail"];
+    $age = $_GET["age"];
 
-      $name = $_GET["name"];
-      $mail = $_GET["mail"];
-      $age = $_GET["age"];
-
+    if(strlen($name) > 3
+    && strpos($mail, ".") !== false && strpos($mail, "@") !== false
+    && is_numeric($age))
+    {
       echo "Accesso riuscito";
     } else{
       echo "Accesso negato";

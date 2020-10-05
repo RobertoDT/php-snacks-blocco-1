@@ -4,7 +4,6 @@ Stampiamo a schermo tutte le partite con questo schema:
 Olimpia Milano - Cantù | 55-60 -->
 
 <?php
-  //creo array matches
   $matches = [
 
     "match1" => [
@@ -26,6 +25,17 @@ Olimpia Milano - Cantù | 55-60 -->
       "squadra_ospite" =>[
         "nome" => "Miami Eat",
         "score" => 65
+      ]
+    ],
+
+    "match3" => [
+      "squadra_casa" => [
+        "nome" => "New York",
+        "score" => 50
+      ],
+      "squadra_ospite" =>[
+        "nome" => "Philadelphia",
+        "score" => 50
       ]
     ],
 
